@@ -3,7 +3,7 @@
 --https://discord.gg/4S6SBgC4DN
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Bit Hub", "Sentinel")
+local Window = Library.CreateLib("Bit Hub (https://discord.gg/4S6SBgC4DN)", "Sentinel")
 local Main = Window:NewTab("Main")
 local TPs = Window:NewTab("TP's")
 local Movement = Window:NewTab("Movement")
@@ -35,6 +35,8 @@ vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
 
 end)
+
+
 
 local Overclock = Main:NewSection("Auto Overclock")
 
