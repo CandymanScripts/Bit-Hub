@@ -118,3 +118,11 @@ elseif(currentOption == "XENO") then
     player.Character:SetPrimaryPartCFrame(CFrame.new(72.2759399, 37.8848839, 14023.5703, -0.985583782, -2.28781349e-09, 0.169188142, 9.57762936e-09, 1, 6.93155542e-08, -0.169188142, 6.99367035e-08, -0.985583782))
                 end
 end)
+syn.protect_gui(Library)
+syn.protect_gui(Window)
+syn.protect_gui(main)
+syn.protect_gui(Main)
+syn.protect_gui(TPs)
+syn.protect_gui(Movement)
+syn.protect_gui(Overclock)
+syn.protect_gui(movement)
