@@ -53,7 +53,7 @@ end)
 
 local movement = Movement:NewSection("Movement")
 
-movement:NewSlider("WalkSpeed", "Changes WalkSpeed", 500, 20, function(s) 
+movement:NewSlider("WalkSpeed", "Changes WalkSpeed", 250, 20, function(s) 
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
