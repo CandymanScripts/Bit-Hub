@@ -1,3 +1,4 @@
+
 --By Candyman#9229
 --Join Discord For Updates
 --https://discord.gg/4S6SBgC4DN
@@ -7,6 +8,7 @@ local Window = Library.CreateLib("Bit Hub (https://discord.gg/4S6SBgC4DN)", "Sen
 local Main = Window:NewTab("Main")
 local TPs = Window:NewTab("TP's")
 local Movement = Window:NewTab("Movement")
+local AutoBuy = Window:NewTab("Autobuy")
 local OverClock = 100
 local player = game.Players.LocalPlayer
 
@@ -43,6 +45,23 @@ end)
 
 end)
 
+
+--main:NewButton("Anti Blacklist", "You Can Walk Thru Blacklist box", function()
+ --local Block_1 = game:GetService("Workspace")["Plot_1"].Block
+ --local Block_2 = game:GetService("Workspace")["Plot_2"].Block
+ --local Block_3 = game:GetService("Workspace")["Plot_3"].Block
+ --local Block_4 = game:GetService("Workspace")["Plot_4"].Block
+ --local Block_5 = game:GetService("Workspace")["Plot_5"].Block
+ --local Block_6 = game:GetService("Workspace")["Plot_6"].Block
+    --if(true)then
+    --Block_1:Destroy()
+    --Block_2:Destroy()
+    --Block_3:Destroy()
+    --Block_4:Destroy()
+    --Block_5:Destroy()
+    --Block_6:Destroy()
+    --end
+--end)
 
 
 local Overclock = Main:NewSection("Auto Overclock")
@@ -125,6 +144,161 @@ elseif(currentOption == "XENO") then
     player.Character:SetPrimaryPartCFrame(CFrame.new(72.2759399, 37.8848839, 14023.5703, -0.985583782, -2.28781349e-09, 0.169188142, 9.57762936e-09, 1, 6.93155542e-08, -0.169188142, 6.99367035e-08, -0.985583782))
                 end
 end)
+
+local Autobuy = AutoBuy:NewSection("AutoBuy")
+local num = 1
+
+Autobuy:NewTextBox("Amount", "How Many To Buy", function(txt)
+	num = txt
+end)
+
+
+Autobuy:NewDropdown("Starter Store", "Pick Item", {"Budget Graphic Card", "Weak Graphic Card", "Slow Graphic Card", "Double Fan Card", "Mining Device", "Mining Device V2", "Silver Card", "Diamond Card", "GeProce PTX 970", "GeProce PTX 1050", "GeProce PTX 1080", "GeProceHTX  2000", "Radon 6000", "GeProceHTX  3000"}, function(currentOption)
+if(currentOption == "Budget Graphic Card") then
+    
+    player.Character:SetPrimaryPartCFrame(CFrame.new(210.622162, 5.50522709, 76.3558731, 0.37892586, -2.5826516e-08, -0.92542702, -2.3546944e-08, 1, -3.75492206e-08, 0.92542702, 3.60193475e-08, 0.37892586))
+    game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("Budget Graphic Card", workspace.Region_shop.Shows:FindFirstChild("1"), num)
+    
+elseif(currentOption == "Weak Graphic Card") then
+    
+    player.Character:SetPrimaryPartCFrame(CFrame.new(210.622162, 5.50522709, 76.3558731, 0.37892586, -2.5826516e-08, -0.92542702, -2.3546944e-08, 1, -3.75492206e-08, 0.92542702, 3.60193475e-08, 0.37892586))
+    game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("Weak Graphic Card", workspace.Region_shop.Shows:FindFirstChild("2"), num)
+
+elseif(currentOption == "Slow Graphic Card") then
+    
+    player.Character:SetPrimaryPartCFrame(CFrame.new(210.622162, 5.50522709, 76.3558731, 0.37892586, -2.5826516e-08, -0.92542702, -2.3546944e-08, 1, -3.75492206e-08, 0.92542702, 3.60193475e-08, 0.37892586)) 
+    game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("Slow Graphic Card", workspace.Region_shop.Shows:FindFirstChild("3"), num)
+
+elseif(currentOption == "Double Fan Card") then
+    
+   player.Character:SetPrimaryPartCFrame(CFrame.new(210.622162, 5.50522709, 76.3558731, 0.37892586, -2.5826516e-08, -0.92542702, -2.3546944e-08, 1, -3.75492206e-08, 0.92542702, 3.60193475e-08, 0.37892586))  
+   game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("Double Fan Card", workspace.Region_shop.Shows:FindFirstChild("4"), num)
+
+elseif(currentOption == "Mining Device") then
+    
+    player.Character:SetPrimaryPartCFrame(CFrame.new(210.622162, 5.50522709, 76.3558731, 0.37892586, -2.5826516e-08, -0.92542702, -2.3546944e-08, 1, -3.75492206e-08, 0.92542702, 3.60193475e-08, 0.37892586))
+    game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("Mining Device", workspace.Region_shop.Shows:FindFirstChild("5"), num)
+
+elseif(currentOption == "Mining Device V2") then
+    
+    player.Character:SetPrimaryPartCFrame(CFrame.new(210.622162, 5.50522709, 76.3558731, 0.37892586, -2.5826516e-08, -0.92542702, -2.3546944e-08, 1, -3.75492206e-08, 0.92542702, 3.60193475e-08, 0.37892586))
+    game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("Mining Device V2", workspace.Region_shop.Shows:FindFirstChild("6"), num)
+
+elseif(currentOption == "Silver Card") then
+    
+    player.Character:SetPrimaryPartCFrame(CFrame.new(210.622162, 5.50522709, 76.3558731, 0.37892586, -2.5826516e-08, -0.92542702, -2.3546944e-08, 1, -3.75492206e-08, 0.92542702, 3.60193475e-08, 0.37892586))
+    game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("Silver Card", workspace.Region_shop.Shows:FindFirstChild("7"), num)
+
+elseif(currentOption == "Diamond Card") then
+    
+    player.Character:SetPrimaryPartCFrame(CFrame.new(210.622162, 5.50522709, 76.3558731, 0.37892586, -2.5826516e-08, -0.92542702, -2.3546944e-08, 1, -3.75492206e-08, 0.92542702, 3.60193475e-08, 0.37892586))
+    game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("Diamond Card", workspace.Region_shop.Shows:FindFirstChild("8"), num)
+
+elseif(currentOption == "GeProce PTX 970") then
+    
+    player.Character:SetPrimaryPartCFrame(CFrame.new(210.622162, 5.50522709, 76.3558731, 0.37892586, -2.5826516e-08, -0.92542702, -2.3546944e-08, 1, -3.75492206e-08, 0.92542702, 3.60193475e-08, 0.37892586))
+    game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("GeProce PTX 970", workspace.Region_shop.Shows:FindFirstChild("9"), num)
+
+elseif(currentOption == "GeProce PTX 1050") then
+    
+    player.Character:SetPrimaryPartCFrame(CFrame.new(210.622162, 5.50522709, 76.3558731, 0.37892586, -2.5826516e-08, -0.92542702, -2.3546944e-08, 1, -3.75492206e-08, 0.92542702, 3.60193475e-08, 0.37892586))
+    game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("GeProce PTX 1050", workspace.Region_shop.Shows:FindFirstChild("10"), num)
+
+elseif(currentOption == "GeProce PTX 1080") then
+    
+    player.Character:SetPrimaryPartCFrame(CFrame.new(210.622162, 5.50522709, 76.3558731, 0.37892586, -2.5826516e-08, -0.92542702, -2.3546944e-08, 1, -3.75492206e-08, 0.92542702, 3.60193475e-08, 0.37892586))
+    game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("GeProce PTX 1080", workspace.Region_shop.Shows:FindFirstChild("11"), num)
+
+elseif(currentOption == "GeProceHTX  2000") then
+    
+    player.Character:SetPrimaryPartCFrame(CFrame.new(210.622162, 5.50522709, 76.3558731, 0.37892586, -2.5826516e-08, -0.92542702, -2.3546944e-08, 1, -3.75492206e-08, 0.92542702, 3.60193475e-08, 0.37892586))
+    game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("GeProceHTX  2000", workspace.Region_shop.Shows:FindFirstChild("12"), num)
+
+elseif(currentOption == "Radon 6000") then
+    
+    player.Character:SetPrimaryPartCFrame(CFrame.new(210.622162, 5.50522709, 76.3558731, 0.37892586, -2.5826516e-08, -0.92542702, -2.3546944e-08, 1, -3.75492206e-08, 0.92542702, 3.60193475e-08, 0.37892586))
+    game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("Radon 6000", workspace.Region_shop.Shows:FindFirstChild("13"), num)
+
+elseif(currentOption == "GeProceHTX  3000") then
+    
+    player.Character:SetPrimaryPartCFrame(CFrame.new(210.622162, 5.50522709, 76.3558731, 0.37892586, -2.5826516e-08, -0.92542702, -2.3546944e-08, 1, -3.75492206e-08, 0.92542702, 3.60193475e-08, 0.37892586))
+game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("GeProceHTX  3000", workspace.Region_shop.Shows:FindFirstChild("14"), num)
+    
+            end
+end)
+
+local newVector3 = Vector3.new(-2, 2, 4)
+local OldPos = CFrame.new(newVector3)
+
+Autobuy:NewDropdown("Bit Store", "Pick Item", {"Slow BitMiner", "BitMiner BE1", "BitMiner BE2", "BitMiner Gold", "BitMiner Super", "BitMiner Super 2", "BitMiner H-Exe", "BitMiner 200", "Bitminer Ex-09", "BitMiner O1", "Bitminer E-X 05 Super", "Bitminer Dual Z"}, function(currentOption)
+if(currentOption == "Slow BitMiner") then
+    --OldPos = (CFrame.new(player.HumanoidRootPart.CFrame))
+    player.Character:SetPrimaryPartCFrame(CFrame.new(225.280914, 5.57847404, 172.246689, 0.165050209, -9.901858e-09, -0.98628515, 3.11166133e-08, 1, -4.8323292e-09, 0.98628515, -2.98922771e-08, 0.165050209))
+    game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("Slow BitMiner", workspace:FindFirstChild("Week 1 Min").Shows:FindFirstChild("1"), num)
+   wait(0.1)
+   --player.Character:SetPrimaryPartCFrame(CFrame.new(OldPos))
+elseif(currentOption == "BitMiner BE1") then
+    
+    player.Character:SetPrimaryPartCFrame(CFrame.new(225.280914, 5.57847404, 172.246689, 0.165050209, -9.901858e-09, -0.98628515, 3.11166133e-08, 1, -4.8323292e-09, 0.98628515, -2.98922771e-08, 0.165050209))
+    game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("BitMiner BE1", workspace:FindFirstChild("Week 1 Min").Shows:FindFirstChild("2"), num)
+
+local OldPos = CFrame.new(225.280914, 5.57847404, 172.246689, 0.165050209, -9.901858e-09, -0.98628515, 3.11166133e-08, 1, -4.8323292e-09, 0.98628515, -2.98922771e-08, 0.165050209)
+
+elseif(currentOption == "BitMiner BE2") then
+    --OldPos = player.HumanoidRootPart.Position
+    player.Character:SetPrimaryPartCFrame(CFrame.new(225.280914, 5.57847404, 172.246689, 0.165050209, -9.901858e-09, -0.98628515, 3.11166133e-08, 1, -4.8323292e-09, 0.98628515, -2.98922771e-08, 0.165050209))
+    game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("BitMiner BE2", workspace:FindFirstChild("Week 1 Min").Shows:FindFirstChild("3"), num)
+    
+
+elseif(currentOption == "BitMiner Gold") then
+    
+   player.Character:SetPrimaryPartCFrame(CFrame.new(225.280914, 5.57847404, 172.246689, 0.165050209, -9.901858e-09, -0.98628515, 3.11166133e-08, 1, -4.8323292e-09, 0.98628515, -2.98922771e-08, 0.165050209)) 
+   game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("BitMiner Gold", workspace:FindFirstChild("Week 1 Min").Shows:FindFirstChild("3"), num)
+
+elseif(currentOption == "BitMiner Super") then
+    
+    player.Character:SetPrimaryPartCFrame(CFrame.new(225.280914, 5.57847404, 172.246689, 0.165050209, -9.901858e-09, -0.98628515, 3.11166133e-08, 1, -4.8323292e-09, 0.98628515, -2.98922771e-08, 0.165050209))
+    game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("BitMiner Super", workspace:FindFirstChild("Week 1 Min").Shows:FindFirstChild("5"), num)
+
+elseif(currentOption == "BitMiner Super 2") then
+    
+    player.Character:SetPrimaryPartCFrame(CFrame.new(225.280914, 5.57847404, 172.246689, 0.165050209, -9.901858e-09, -0.98628515, 3.11166133e-08, 1, -4.8323292e-09, 0.98628515, -2.98922771e-08, 0.165050209))
+    game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("BitMiner Super 2", workspace:FindFirstChild("Week 1 Min").Shows:FindFirstChild("6"), num)
+
+elseif(currentOption == "BitMiner H-Exe") then
+    
+    player.Character:SetPrimaryPartCFrame(CFrame.new(215.383026, 25.7528248, 158.548553, 0.867055058, 6.40110587e-09, -0.498212337, -1.68109443e-10, 1, 1.25555824e-08, 0.498212337, -1.08026272e-08, 0.867055058))
+    game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("BitMiner H-Exe", workspace:FindFirstChild("Week 2 Min").Shows:FindFirstChild("1"), num)
+
+elseif(currentOption == "BitMiner 200") then
+    
+    player.Character:SetPrimaryPartCFrame(CFrame.new(215.383026, 25.7528248, 158.548553, 0.867055058, 6.40110587e-09, -0.498212337, -1.68109443e-10, 1, 1.25555824e-08, 0.498212337, -1.08026272e-08, 0.867055058))
+    game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("BitMiner 200", workspace:FindFirstChild("Week 2 Min").Shows:FindFirstChild("2"), num)
+
+elseif(currentOption == "Bitminer Ex-09") then
+    
+    player.Character:SetPrimaryPartCFrame(CFrame.new(215.383026, 25.7528248, 158.548553, 0.867055058, 6.40110587e-09, -0.498212337, -1.68109443e-10, 1, 1.25555824e-08, 0.498212337, -1.08026272e-08, 0.867055058))
+    game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("Bitminer Ex-09", workspace:FindFirstChild("Week 2 Min").Shows:FindFirstChild("3"), num)
+
+elseif(currentOption == "BitMiner O1") then
+    
+    player.Character:SetPrimaryPartCFrame(CFrame.new(215.383026, 25.7528248, 158.548553, 0.867055058, 6.40110587e-09, -0.498212337, -1.68109443e-10, 1, 1.25555824e-08, 0.498212337, -1.08026272e-08, 0.867055058))
+    game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("BitMiner O1", workspace:FindFirstChild("Week 2 Min").Shows:FindFirstChild("4"), num)
+
+elseif(currentOption == "Bitminer E-X 05 Super") then
+    
+    player.Character:SetPrimaryPartCFrame(CFrame.new(215.383026, 25.7528248, 158.548553, 0.867055058, 6.40110587e-09, -0.498212337, -1.68109443e-10, 1, 1.25555824e-08, 0.498212337, -1.08026272e-08, 0.867055058))
+    game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("Bitminer E-X 05 Super", workspace:FindFirstChild("Week 2 Min").Shows:FindFirstChild("5"), num)
+
+elseif(currentOption == "Bitminer Dual Z") then
+    
+    player.Character:SetPrimaryPartCFrame(CFrame.new(215.383026, 25.7528248, 158.548553, 0.867055058, 6.40110587e-09, -0.498212337, -1.68109443e-10, 1, 1.25555824e-08, 0.498212337, -1.08026272e-08, 0.867055058))
+    game:GetService("ReplicatedStorage").Events.BuyCard:FireServer("Bitminer Dual Z", workspace:FindFirstChild("Week 2 Min").Shows:FindFirstChild("6"), num)
+
+
+            end
+end) 
+
 syn.protect_gui(Library)
 syn.protect_gui(Window)
 syn.protect_gui(main)
@@ -133,3 +307,4 @@ syn.protect_gui(TPs)
 syn.protect_gui(Movement)
 syn.protect_gui(Overclock)
 syn.protect_gui(movement)
+syn.protect_gui(AutoBuy)
