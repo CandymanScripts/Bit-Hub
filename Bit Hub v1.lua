@@ -148,10 +148,9 @@ end)
 local Autobuy = AutoBuy:NewSection("AutoBuy")
 local num = 1
 
-Autobuy:NewTextBox("Amount", "How Many To Buy", function(txt)
-	num = txt
+Autobuy:NewSlider("Amount", "SliderInfo", 100, 1, function(OOF) 
+    num = OOF
 end)
-
 
 Autobuy:NewDropdown("Starter Store", "Pick Item", {"Budget Graphic Card", "Weak Graphic Card", "Slow Graphic Card", "Double Fan Card", "Mining Device", "Mining Device V2", "Silver Card", "Diamond Card", "GeProce PTX 970", "GeProce PTX 1050", "GeProce PTX 1080", "GeProceHTX  2000", "Radon 6000", "GeProceHTX  3000"}, function(currentOption)
 if(currentOption == "Budget Graphic Card") then
