@@ -21,6 +21,29 @@ wait(1)
 vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
 
+local name = "Placeholder"
+local plot = "Plot1"
+
+
+name = tostring(game.Players.LocalPlayer)
+name = name .. "'s plot"
+
+if (name == game:GetService("Workspace")["Plot_1"].Tabliczka.wr.SurfaceGui.Text.Text) then
+    plot = "Plot1"
+elseif(name == game:GetService("Workspace")["Plot_2"].Tabliczka.wr.SurfaceGui.Text.Text)then
+    plot = "Plot2"
+elseif(name == game:GetService("Workspace")["Plot_3"].Tabliczka.wr.SurfaceGui.Text.Text)then
+    plot = "Plot3"    
+elseif(name == game:GetService("Workspace")["Plot_4"].Tabliczka.wr.SurfaceGui.Text.Text)then
+    plot = "Plot4"        
+elseif(name == game:GetService("Workspace")["Plot_5"].Tabliczka.wr.SurfaceGui.Text.Text)then
+    plot = "Plot5"
+elseif(name == game:GetService("Workspace")["Plot_6"].Tabliczka.wr.SurfaceGui.Text.Text)then
+    plot = "Plot6"
+end
+print(plot)
+
+
 main:NewButton("Auto Sell BitCoin", "Auto Sells For You", function()
     while (true)  do
         wait(1)
@@ -43,6 +66,112 @@ wait(1)
 vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
 
+end)
+
+
+main:NewButton("Fill Base With Server Racks", "Fill Base", function()
+if(name == game:GetService("Workspace")["Plot_1"].Tabliczka.wr.SurfaceGui.Text.Text)then
+local Cords1 = 25
+local Cords2 = 6
+local Cords3 = 168
+local Cords4 = 0
+for i=1,200 do
+    wait(0.5)
+game:GetService("ReplicatedStorage").Events.Place:FireServer("Server Shelf", Cords1, Cords2, Cords3, Cords4)
+if(Cords1 <= -48)then
+Cords3 = Cords3 + 8.5
+Cords1 = 25
+else
+    Cords1 = Cords1 - 3.9
+    end
+end
+elseif(name == game:GetService("Workspace")["Plot_2"].Tabliczka.wr.SurfaceGui.Text.Text)then
+local Cords1 = 118
+local Cords2 = 6
+local Cords3 = 167
+local Cords4 = 0
+for i=1,200 do
+    wait(0.5)
+game:GetService("ReplicatedStorage").Events.Place:FireServer("Server Shelf", Cords1, Cords2, Cords3, Cords4)
+if(Cords1 <= 51.7)then
+Cords3 = Cords3 + 8.5
+Cords1 = 118
+else
+    Cords1 = Cords1 - 3.9
+    end
+end
+elseif(name == game:GetService("Workspace")["Plot_3"].Tabliczka.wr.SurfaceGui.Text.Text)then
+local Cords1 = 25
+local Cords2 = 6
+local Cords3 = 78
+local Cords4 = 0   
+for i=1,200 do
+    wait(0.5)
+game:GetService("ReplicatedStorage").Events.Place:FireServer("Server Shelf", Cords1, Cords2, Cords3, Cords4)
+if(Cords1 <= -48)then
+Cords3 = Cords3 + 8.5
+Cords1 = 25
+else
+    Cords1 = Cords1 - 3.9
+    end
+end
+elseif(name == game:GetService("Workspace")["Plot_4"].Tabliczka.wr.SurfaceGui.Text.Text)then
+local Cords1 = 119
+local Cords2 = 6
+local Cords3 = 77
+local Cords4 = 0
+for i=1,200 do
+    wait(0.5)
+game:GetService("ReplicatedStorage").Events.Place:FireServer("Server Shelf", Cords1, Cords2, Cords3, Cords4)
+if(Cords1 <= 51.7)then
+Cords3 = Cords3 + 8.5
+Cords1 = 119
+else
+    Cords1 = Cords1 - 3.9
+    end
+end
+elseif(name == game:GetService("Workspace")["Plot_5"].Tabliczka.wr.SurfaceGui.Text.Text)then
+local Cords1 = 35
+local Cords2 = 6
+local Cords3 = -13
+local Cords4 = 0
+for i=1,200 do
+    wait(0.5)
+game:GetService("ReplicatedStorage").Events.Place:FireServer("Server Shelf", Cords1, Cords2, Cords3, Cords4)
+if(Cords1 <= -48)then
+Cords3 = Cords3 + 8.5
+Cords1 = 35
+else
+    Cords1 = Cords1 - 3.9
+    end
+end
+elseif(name == game:GetService("Workspace")["Plot_6"].Tabliczka.wr.SurfaceGui.Text.Text)then
+local Cords1 = 118
+local Cords2 = 6
+local Cords3 = -13
+local Cords4 = 0
+print("plot6")
+for i=1,200 do
+    wait(0.5)
+game:GetService("ReplicatedStorage").Events.Place:FireServer("Server Shelf", Cords1, Cords2, Cords3, Cords4)
+if(Cords1 <= 51.7)then
+Cords3 = Cords3 + 8.5
+Cords1 = 118
+else
+    Cords1 = Cords1 - 3.9
+    end
+end
+end
+for i=1,200 do
+    wait(0.5)
+game:GetService("ReplicatedStorage").Events.Place:FireServer("Server Shelf", Cords1, Cords2, Cords3, Cords4)
+if(Cords1 <= -48)then
+Cords3 = Cords3 + 8.5
+Cords1 = 25
+else
+    Cords1 = Cords1 - 3.9
+    end
+end
 end)
 
 
@@ -131,7 +260,7 @@ elseif(currentOption == "HSV") then
 elseif(currentOption == "Chypset") then
     player.Character:SetPrimaryPartCFrame(CFrame.new(-210.836075, 22.7923527, 296.814453, -0.599075854, -6.93177995e-08, 0.80069226, 5.58041124e-09, 1, 9.07475837e-08, -0.80069226, 5.88328781e-08, -0.599075854))
 elseif(currentOption == "GenEX") then
-    player.Character:SetPrimaryPartCFrame(CFrame.new(-140.259216, 37.9175224, 13828.6963, 0.986300766, 2.81707582e-08, -0.164956883, -2.45313796e-08, 1, 2.40998688e-08, 0.164956883, -1.97230996e-08, 0.986300766))
+    player.Character:SetPrimaryPartCFrame(CFrame.new(-140.259216, 37.9175224, 13828.7963, 0.986300766, 2.81707582e-08, -0.164956883, -2.45313796e-08, 1, 2.40998688e-08, 0.164956883, -1.97230996e-08, 0.986300766))
 elseif(currentOption == "Solaris Electronics") then
     player.Character:SetPrimaryPartCFrame(CFrame.new(6.94969606, 37.9075432, 13752.2686, 0.921892583, -3.01202334e-08, -0.387445539, -1.9130213e-09, 1, -8.22924235e-08, 0.387445539, 7.66059642e-08, 0.921892583))
 elseif(currentOption == "SOLARIS GENERATORS") then
